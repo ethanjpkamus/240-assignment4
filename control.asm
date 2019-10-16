@@ -7,8 +7,6 @@ global control
 extern printf
 extern scanf
 extern fill
-;extern display
-;extern sum
 
 segment .data
 	greeting db "you will be entering integers into an array",10,0

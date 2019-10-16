@@ -4,6 +4,8 @@
 
 using namespace std;
 
+extern "C" int fill(int arr[], int size);
+
 int fill(int arr[], int size){
 
 	int count = 0;
