@@ -61,7 +61,7 @@ control:
 ;===== call fill ===============================================================
 
 	mov	rax, 0
-	mov	rdi, num
+	mov	rdi, nums
 	mov	rsi, 20
 	call	fill
 
