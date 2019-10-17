@@ -14,10 +14,18 @@ int fill(int arr[], int size){
 
 	for(int i = 0; i < size; ++i){
 
-		if(count == size){
+		int temp;
+		cin >> temp;
+
+		if(temp == 'd' || temp == 'D'){
+			cout << "Control + D detected" << endl;
 			break;
 		}
-		cin >> arr[i];
+		if(count == size){
+			cout << "You reached the maximum number of integers" << endl;
+			break;
+		}
+		arr[i] = temp;
 		count++;
 	}
 	return count;

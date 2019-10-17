@@ -82,6 +82,11 @@ beginning:
 
 	mov	r15, rax	;stores count
 
+	mov qword	rax, 0
+	mov		rdi, integerformat
+	mov		rsi, r15
+	call		printf
+
 ;===== call display ============================================================
 
 	mov	rax, r15
