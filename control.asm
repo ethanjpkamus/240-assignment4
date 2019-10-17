@@ -6,6 +6,7 @@ global control
 
 extern printf
 extern scanf
+extern getchar
 extern fill
 
 segment .data
