@@ -61,6 +61,12 @@ beginning:
 
 ;===== get user input ==========================================================
 
+	push qword 0
+	mov qword  rax, 0
+	mov 	    rdi, integerformat
+	mov        rsi, rsp
+	call 	    scanf
+
 	mov	rax, 0
 	call	getchar
 	cmp	rax, 121
