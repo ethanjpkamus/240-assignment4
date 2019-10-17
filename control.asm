@@ -42,6 +42,8 @@ control:
     	push   r14
 	push   r15
 
+beginning:
+
 ;===== print welcome statement =================================================
 
 	mov qword	rax, 0
@@ -55,6 +57,13 @@ control:
 	mov		rdi, stringformat
 	mov		rsi, ready
 	call 		printf
+
+;===== get user input ==========================================================
+
+	mov	rax, 0
+	call	getchar
+	cmp	rax, 121
+	je	beginning
 
 ;===== call fill ===============================================================
 
