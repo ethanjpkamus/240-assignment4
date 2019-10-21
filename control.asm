@@ -10,8 +10,10 @@ extern getchar
 extern fill
 
 segment .data
+
 	greeting db "you will be entering integers into an array",10,0
 	ready db "are you ready? (y or n)",10,0
+
 	stringformat db "%s"
 	integerformat db "%ld"
 
