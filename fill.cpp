@@ -4,28 +4,24 @@
 
 using namespace std;
 
-extern "C" int fill(int arr[], int size);
+extern "C" int fill(int * arr[], int size);
 
 int fill(int * arr[], int size){
 
 	int count = 0;
+	int temp = 0;
 
-	cout << "Input 20 integers please :)" << endl;
+	cout << "Input the integers you want. Enter cntl+D when you are done" << endl;
 
-	for(int i = 0; i < size; ++i){
 
-		int temp;
-		cin >> temp;
+	while(getline(cin,temp)){
 
-		if(temp == 'd' || temp == 'D'){
-			cout << "Control + D detected" << endl;
-			break;
-		}
 		if(count == size){
-			cout << "You reached the maximum number of integers" << endl;
+			cout << "You have reached the maximum amount of integers (10)" << endl;
 			break;
 		}
-		arr[i] = temp;
+
+		arr[count] = temp;
 		count++;
 	}
 	return count;

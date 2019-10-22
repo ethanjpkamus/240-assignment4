@@ -4,6 +4,8 @@
 #include <stdint.h>
 #include <stdlib.h>
 
+extern "C" int display(int arr[], int size);
+
 int display(int arr[], int size){
 
 	//print initial statement
@@ -15,7 +17,7 @@ int display(int arr[], int size){
 	}
 
 	//ask if the numbers are in the correct order
-	printf("%s", "Is this correct? (y or n)");
+	printf("%s", "\nIs this correct? (y or n)");
 
 
 } //end of display function

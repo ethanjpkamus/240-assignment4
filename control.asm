@@ -8,6 +8,7 @@ extern printf
 extern scanf
 extern getchar
 extern fill
+extern display
 
 segment .data
 
@@ -79,7 +80,7 @@ beginning:
 
 	mov	rax, 0
 	mov	rdi, nums
-	mov	rsi, 20
+	mov	rsi, 10
 	call	fill
 
 	mov	r15, rax	;stores count
@@ -91,7 +92,15 @@ beginning:
 
 ;===== call display ============================================================
 
-	mov	rax, r15
+	mov 	rax, 0
+	mov 	rdi, nums
+	mov	rsi, 10
+	call 	display
+
+;===== call sum ===============================================================
+
+	call sum
+	mov	rax, r15 ;stores the sum from sum.asm
 
 	pop 	r15
 	pop	r14
