@@ -44,8 +44,6 @@ control:
     	push   r14
 	push   r15
 
-
-
 ;===== print welcome statement =================================================
 
 	mov qword	rax, 0
