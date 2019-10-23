@@ -44,7 +44,7 @@ control:
     	push   r14
 	push   r15
 
-beginning:
+
 
 ;===== print welcome statement =================================================
 
@@ -53,6 +53,7 @@ beginning:
 	mov		rsi, greeting
 	call		printf
 
+beginning:
 ;===== print ready statement ===================================================
 
 	mov qword	rax, 0
@@ -70,7 +71,7 @@ beginning:
 
 	mov	rax, 0
 	call	getchar
-	cmp	rax, 121
+	cmp	rax, 110
 	je	beginning
 
 ;===== call fill ===============================================================
@@ -94,13 +95,26 @@ beginning:
 	mov	rsi, 10
 	call 	display
 
+;===== call getchar ===========================================================
+
+	push qword 0
+	mov qword  rax, 0
+	mov 	    rdi, integerformat
+	mov        rsi, rsp
+	call 	    scanf
+
+	mov	rax, 0
+	call	getchar
+	cmp	rax, 110
+	je	beginning
+
 ;===== call sum ===============================================================
 
 	mov 	rax, 0
 	mov	rdi, nums
 	mov 	rsi, 10
 	call 	sum
-	
+
 	mov	rax, r15 ;stores the sum from sum.asm
 
 	pop 	r15
