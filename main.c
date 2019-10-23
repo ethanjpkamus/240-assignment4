@@ -10,6 +10,7 @@
 extern long control();
 
 int main(int argc, char * argv[]){
+	
        long pass = 0;
 
        //cout << "This Assignment 2 was Programmed by Ethan Kamus\n";
@@ -22,4 +23,5 @@ int main(int argc, char * argv[]){
        printf("%s\n", "The main will now return 0. Bye.");
 
        return 0;
+
 }
