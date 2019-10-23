@@ -25,7 +25,7 @@ begin_loop:
 	add	r8, [r10+r9*8]
 	inc	r9
 
-	cmp	c9, rsi
+	cmp	r9, rsi
 	jne begin_loop
 
 

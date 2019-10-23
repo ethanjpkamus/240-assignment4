@@ -4,9 +4,9 @@
 
 using namespace std;
 
-extern "C" int fill(int * arr[], int size);
+extern "C" int fill(int arr[], int size);
 
-int fill(int * arr[], int size){
+int fill(int arr[], int size){
 
 	int count = 0;
 	int temp = 0;
@@ -15,7 +15,7 @@ int fill(int * arr[], int size){
 	     << "Enter cntl+D when you are done" << endl;
 
 
-	while(count != size){
+	while(!cin.eof()){
 
 		cin >> temp;
 		arr[count] = temp;

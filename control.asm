@@ -108,12 +108,13 @@ beginning:
 
 ;===== call sum ===============================================================
 
+	push qword 0
 	mov 	rax, 0
 	mov	rdi, nums
 	mov 	rsi, 10
 	call 	sum
 
-	mov	rax, r15 ;stores the sum from sum.asm
+	mov	r15,rax ;stores the sum from sum.asm
 
 	pop 	r15
 	pop	r14
