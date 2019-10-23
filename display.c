@@ -4,9 +4,9 @@
 #include <stdint.h>
 #include <stdlib.h>
 
-extern "C" int display(int arr[], int size);
+extern "C" void display(int arr[], int size);
 
-int display(int arr[], int size){
+void display(int arr[], int size){
 
 	//print initial statement
 	printf("%s", "The Numbers you entered are: ");

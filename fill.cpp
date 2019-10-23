@@ -11,13 +11,15 @@ int fill(int * arr[], int size){
 	int count = 0;
 	int temp = 0;
 
-	cout << "Input the integers you want. Enter cntl+D when you are done" << endl;
+	cout << "Input the integers you want. "
+	     << "Enter cntl+D when you are done" << endl;
 
 
 	while(getline(cin,temp)){
 
 		if(count == size){
-			cout << "You have reached the maximum amount of integers (10)" << endl;
+			cout << "You have reached the maximum"
+			     << "amount of integers (10)" << endl;
 			break;
 		}
 

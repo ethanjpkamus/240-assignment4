@@ -27,9 +27,6 @@ segment .text
 
 control:
 
-	;check if user input y, if true, make loop to call fill until the array is empty
-	;make array based on number of integers input
-
 	push	rbp
     	mov    rbp, rsp
 
@@ -99,7 +96,11 @@ beginning:
 
 ;===== call sum ===============================================================
 
-	call sum
+	mov 	rax, 0
+	mov	rdi, nums
+	mov 	rsi, 10
+	call 	sum
+	
 	mov	rax, r15 ;stores the sum from sum.asm
 
 	pop 	r15
